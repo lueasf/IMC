@@ -1,0 +1,129 @@
+*,  
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* est un reset pour les browser */
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to left, #5d3db3, #16c490);
+    padding: clamp(20px, 5vw, 50px) 10px 10 px; /* clam(mini, pref, max) avec pref=max/10 */
+    /*vw */
+}
+
+/*rappel : div et class avec un . et id avec # */
+.container {
+    max-width: 850px; /*largeur max*/
+    background: #ccd6eb;
+    border: 1px solid #19acf5; /* 1px de large, solide et bleu */
+    padding: 25px; /*espace interieur*/
+    margin: 25px auto 0 auto; /*centre le container*/
+    border-radius: 5px; 
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); /* 0 px de deplacement, 4px de flou, 5px de taille, couleur noir, 0.3 de transparence */
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+h1 span {
+    font-weight: 700;
+}
+
+.inputs-container {
+    display : flex; /*pour les mettre côte à côte*/
+    justify-content: center;
+}
+
+.inputs-container label {
+    display : block ; 
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.inputs-container input {
+    min-width: 350px; 
+    font-size: 18px;
+    padding: 15px;
+    border : none;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.inputs-container input:focus {
+    outline: 1px solid #333; /*pour voir le focus*/
+}
+
+.inputs-group:nth-child(2) { /*pour le 2ème enfant*/
+    margin-left: 20px;
+}
+
+form button {
+    font-size: 20px;
+    min-width: 200px;
+    margin: 40px auto;
+    display: block;
+    padding: 10px;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer; /*pour mettre une flèche quand on survole*/
+    background-color: #e6c740;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+form button:hover {
+    background: #c0b51b;
+}
+
+.info {
+    text-align: center;
+}
+
+.bmi-value {
+    font-size: 45px;
+    margin-bottom: 5px;
+    font-weight: bolder; /*valeurs ou bolder/lighter */
+}
+
+.result {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+
+/*RESPONSIVENESS*/
+
+@media (max-width: 800px){
+    .container {
+        max-width: 600px; /*En dessous de 800px de taille d'écran, on réduit le cont à 600px*/
+    }
+    .inputs-container {
+        flex-direction: column; /*pour les mettre en colonne*/
+        align-items: center; 
+    }
+    .inputs-group:nth-child(2) {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) { /*pour les téléphones*/
+    .inputs-group {
+        width: 100%; 
+    }
+    .inputs-group input {
+        width: 100%; 
+        min-width: auto;
+    }
+}
