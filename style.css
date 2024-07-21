@@ -78,12 +78,12 @@ form button {
     font-weight: 700;
     border-radius: 5px;
     cursor: pointer; /*pour mettre une flèche quand on survole*/
-    background-color: #e6c740;
+    background: linear-gradient(to left, #4772ce, #16c499);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 form button:hover {
-    background: #c0b51b;
+    background: #3544cc;
 }
 
 .info {
@@ -101,6 +101,13 @@ form button:hover {
     font-size: 20px;
 }
 
+footer {
+        color: #fff;
+        text-align: center;
+        padding: 16px;
+        margin-top: 32px;
+        font-size: 0.8rem;
+      }
 
 /*RESPONSIVENESS*/
 
